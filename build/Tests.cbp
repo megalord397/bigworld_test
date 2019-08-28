@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Tests"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\CMake\;CMake Files\CMake\Modules\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/t/workspace/tmp/0000urhoextras/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/home/t/workspace/tmp/0000urhoextras/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/t/workspace/tmp/0000urhoextras/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tests">
+				<Option output="/home/t/workspace/tmp/0000urhoextras/build/bin/Tests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/t/workspace/tmp/0000urhoextras/build/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DURHO3D_STATIC_DEFINE"/>
+					<Add option="-DURHO3D_ANGELSCRIPT"/>
+					<Add option="-DURHO3D_IK"/>
+					<Add option="-DURHO3D_LOGGING"/>
+					<Add option="-DURHO3D_LUA"/>
+					<Add option="-DURHO3D_NAVIGATION"/>
+					<Add option="-DURHO3D_NETWORK"/>
+					<Add option="-DURHO3D_PHYSICS"/>
+					<Add option="-DURHO3D_PROFILING"/>
+					<Add option="-DURHO3D_THREADING"/>
+					<Add option="-DURHO3D_URHO2D"/>
+					<Add option="-DURHO3D_WEBP"/>
+					<Add directory="/home/t/workspace/Urho3DSP/Build/include"/>
+					<Add directory="/home/t/workspace/Urho3DSP/Build/include/Urho3D/ThirdParty"/>
+					<Add directory="/home/t/workspace/Urho3DSP/Build/include/Urho3D/ThirdParty/Bullet"/>
+					<Add directory="/home/t/workspace/Urho3DSP/Build/include/Urho3D/ThirdParty/Lua"/>
+					<Add directory="/home/t/workspace/tmp/0000urhoextras/."/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 Tests"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tests/fast">
+				<Option output="/home/t/workspace/tmp/0000urhoextras/build/bin/Tests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/t/workspace/tmp/0000urhoextras/build/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DURHO3D_STATIC_DEFINE"/>
+					<Add option="-DURHO3D_ANGELSCRIPT"/>
+					<Add option="-DURHO3D_IK"/>
+					<Add option="-DURHO3D_LOGGING"/>
+					<Add option="-DURHO3D_LUA"/>
+					<Add option="-DURHO3D_NAVIGATION"/>
+					<Add option="-DURHO3D_NETWORK"/>
+					<Add option="-DURHO3D_PHYSICS"/>
+					<Add option="-DURHO3D_PROFILING"/>
+					<Add option="-DURHO3D_THREADING"/>
+					<Add option="-DURHO3D_URHO2D"/>
+					<Add option="-DURHO3D_WEBP"/>
+					<Add directory="/home/t/workspace/Urho3DSP/Build/include"/>
+					<Add directory="/home/t/workspace/Urho3DSP/Build/include/Urho3D/ThirdParty"/>
+					<Add directory="/home/t/workspace/Urho3DSP/Build/include/Urho3D/ThirdParty/Bullet"/>
+					<Add directory="/home/t/workspace/Urho3DSP/Build/include/Urho3D/ThirdParty/Lua"/>
+					<Add directory="/home/t/workspace/tmp/0000urhoextras/."/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 Tests/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/t/workspace/tmp/0000urhoextras/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/t/workspace/tmp/0000urhoextras/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/home/t/workspace/tmp/0000urhoextras/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/home/t/workspace/tmp/0000urhoextras/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/t/workspace/tmp/0000urhoextras/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/bin/CoreData">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/bin/Data">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/camera.cpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/camera.hpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/cameracontrol.cpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/cameracontrol.hpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/chunk.cpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/chunk.hpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/chunkworld.cpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/chunkworld.hpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/collisions.cpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/collisions.hpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/colorband.hpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/json.cpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/json.hpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/lodbuilder.cpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/lodbuilder.hpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/main.cpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/mathutils.hpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/modelcombiner.cpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/modelcombiner.hpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/procedural/diamondsquare.hpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/procedural/function.hpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/procedural/functionwrapper.hpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/procedural/md5rng.hpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/procedural/smooth.hpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/random.hpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/states/state.hpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/states/statemanager.cpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/states/statemanager.hpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/triangle.hpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/types.hpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/utils.hpp">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/CMake/Modules/CheckCompilerToolchain.cmake">
+			<Option virtualFolder="CMake Files\CMake\Modules\"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/CMake/Modules/CheckHost.cmake">
+			<Option virtualFolder="CMake Files\CMake\Modules\"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/CMake/Modules/FindUrho3D.cmake">
+			<Option virtualFolder="CMake Files\CMake\Modules\"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/CMake/Modules/GenerateExportHeader.cmake">
+			<Option virtualFolder="CMake Files\CMake\Modules\"/>
+		</Unit>
+		<Unit filename="/home/t/workspace/tmp/0000urhoextras/CMake/Modules/UrhoCommon.cmake">
+			<Option virtualFolder="CMake Files\CMake\Modules\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,31 @@
+/home/t/clion-2018.3.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" /home/t/workspace/tmp/0000urhoextras
+CMake Deprecation Warning at CMakeLists.txt:19 (cmake_policy):
+  The OLD behavior for policy CMP0026 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+
+
+-- Configuring done
+CMake Warning (dev) at CMake/Modules/UrhoCommon.cmake:1481 (add_executable):
+  Policy CMP0063 is not set: Honor visibility properties for all target
+  types.  Run "cmake --help-policy CMP0063" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  Target "Tests" of type "EXECUTABLE" has the following visibility properties
+  set for CXX:
+
+    CXX_VISIBILITY_PRESET
+    VISIBILITY_INLINES_HIDDEN
+
+  For compatibility CMake is not honoring them for this target.
+Call Stack (most recent call first):
+  CMake/Modules/UrhoCommon.cmake:1669 (setup_executable)
+  CMakeLists.txt:37 (setup_main_executable)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Generating done
+-- Build files have been written to: /home/t/workspace/tmp/0000urhoextras/build

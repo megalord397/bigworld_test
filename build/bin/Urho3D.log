@@ -1,0 +1,19 @@
+[Wed Aug 28 21:31:42 2019] INFO: Opened log file Urho3D.log
+[Wed Aug 28 21:31:42 2019] INFO: Created 1 worker thread
+[Wed Aug 28 21:31:42 2019] INFO: Added resource path /home/t/workspace/tmp/0000urhoextras/build/bin/Data/
+[Wed Aug 28 21:31:42 2019] INFO: Added resource path /home/t/workspace/tmp/0000urhoextras/build/bin/CoreData/
+[Wed Aug 28 21:31:43 2019] INFO: Set screen mode 1000x700 windowed monitor 0
+[Wed Aug 28 21:31:43 2019] INFO: Initialized input
+[Wed Aug 28 21:31:43 2019] INFO: Initialized user interface
+[Wed Aug 28 21:31:43 2019] DEBUG: Loading resource Textures/Ramp.png
+[Wed Aug 28 21:31:43 2019] DEBUG: Loading temporary resource Textures/Ramp.xml
+[Wed Aug 28 21:31:43 2019] DEBUG: Loading resource Textures/Spot.png
+[Wed Aug 28 21:31:43 2019] DEBUG: Loading temporary resource Textures/Spot.xml
+[Wed Aug 28 21:31:43 2019] DEBUG: Loading resource Techniques/NoTexture.xml
+[Wed Aug 28 21:31:43 2019] DEBUG: Loading resource RenderPaths/Forward.xml
+[Wed Aug 28 21:31:43 2019] INFO: Initialized renderer
+[Wed Aug 28 21:31:43 2019] INFO: Set audio mode 44100 Hz stereo interpolated
+[Wed Aug 28 21:31:43 2019] INFO: Initialized engine
+[Wed Aug 28 21:31:43 2019] DEBUG: Window was moved to 461,215
+[Wed Aug 28 21:31:43 2019] DEBUG: Reloading shaders
+[Wed Aug 28 21:31:51 2019] DEBUG: Quitting SDL
