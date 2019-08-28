@@ -74,10 +74,9 @@ public:
         corners.Push(corner);
         Chunk *chunk = new Chunk(chunkWorld, pos, corners);
         chunkWorld->addChunk(pos, chunk);
-        BigWorld::Camera* camera = chunkWorld->setUpCamera(pos, 0, Vector3::ZERO);
+        BigWorld::Camera* camera = chunkWorld->setUpCamera(pos, 1, Vector3(0,1,0), 0, 20);
 
         cameracontrol_ = new CameraControl(context_);
-
 
         Renderer* renderer=GetSubsystem<Renderer>();
         SharedPtr<Viewport> viewport(new Viewport(context_,chunkWorld->getScene(),camera->getRawCamera()));
