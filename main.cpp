@@ -44,7 +44,7 @@ using namespace UrhoExtras;
 class MyApp: public Application
 {
 public:
-    CameraControl * cameracontrol_;
+    CameraControl *cameracontrol_;
     MyApp(Context *context)
         : Application(context)
     {
@@ -65,6 +65,9 @@ public:
     {
         ChunkWorld *chunkWorld = new ChunkWorld(context_, 1, 1, 1, 1, 30, 30, false);
         chunkWorld->addTerrainTexture("Textures/TerrainWeights.dds");
+        String model("Models/Plane.mdl");
+        String material("Materials/Terrain.xml");
+        chunkWorld->addUndergrowthModel(0, model, material, 0);
         IntVector2 pos(0, 0);
         Corners corners;
         BigWorld::Corner corner;
@@ -74,18 +77,18 @@ public:
         corners.Push(corner);
         Chunk *chunk = new Chunk(chunkWorld, pos, corners);
         chunkWorld->addChunk(pos, chunk);
-        BigWorld::Camera* camera = chunkWorld->setUpCamera(pos, 1, Vector3(0,1,0), 0, 20);
+        BigWorld::Camera *camera = chunkWorld->setUpCamera(pos, 1, Vector3(0, 1, 0), 0, 20);
 
         cameracontrol_ = new CameraControl(context_);
 
-        Renderer* renderer=GetSubsystem<Renderer>();
-        SharedPtr<Viewport> viewport(new Viewport(context_,chunkWorld->getScene(),camera->getRawCamera()));
-        renderer->SetViewport(0,viewport);
+        Renderer *renderer = GetSubsystem<Renderer>();
+        SharedPtr<Viewport> viewport(new Viewport(context_, chunkWorld->getScene(), camera->getRawCamera()));
+        renderer->SetViewport(0, viewport);
 
-        SubscribeToEvent(E_UPDATE,URHO3D_HANDLER(MyApp,HandleUpdate));
+        SubscribeToEvent(E_UPDATE, URHO3D_HANDLER(MyApp, HandleUpdate));
     }
 
-    void HandleUpdate(StringHash eventType,VariantMap& eventData)
+    void HandleUpdate(StringHash eventType, VariantMap &eventData)
     {
         cameracontrol_->update();
     }
