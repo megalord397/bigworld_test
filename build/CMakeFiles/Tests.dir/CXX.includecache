@@ -1177,6 +1177,8 @@ types.hpp
 /home/t/workspace/tmp/0000urhoextras/types.hpp
 cameracontrol.hpp
 /home/t/workspace/tmp/0000urhoextras/cameracontrol.hpp
+camera.hpp
+/home/t/workspace/tmp/0000urhoextras/camera.hpp
 
 /home/t/workspace/tmp/0000urhoextras/types.hpp
 Urho3D/Container/HashMap.h
