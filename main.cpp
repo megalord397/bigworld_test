@@ -35,6 +35,7 @@
 #include "chunk.hpp"
 #include "types.hpp"
 #include "cameracontrol.hpp"
+#include "camera.hpp"
 
 using namespace Urho3D;
 using namespace BigWorld;
@@ -43,6 +44,7 @@ using namespace UrhoExtras;
 class MyApp: public Application
 {
 public:
+    CameraControl * cameracontrol_;
     MyApp(Context *context)
         : Application(context)
     {
@@ -72,11 +74,22 @@ public:
         corners.Push(corner);
         Chunk *chunk = new Chunk(chunkWorld, pos, corners);
         chunkWorld->addChunk(pos, chunk);
-        chunkWorld->setUpCamera(pos, 0, Vector3::ZERO);
+        BigWorld::Camera* camera = chunkWorld->setUpCamera(pos, 0, Vector3::ZERO);
 
-        new CameraControl(context_);
+        cameracontrol_ = new CameraControl(context_);
+
+
+        Renderer* renderer=GetSubsystem<Renderer>();
+        SharedPtr<Viewport> viewport(new Viewport(context_,chunkWorld->getScene(),camera->getRawCamera()));
+        renderer->SetViewport(0,viewport);
+
+        SubscribeToEvent(E_UPDATE,URHO3D_HANDLER(MyApp,HandleUpdate));
     }
 
+    void HandleUpdate(StringHash eventType,VariantMap& eventData)
+    {
+        cameracontrol_->update();
+    }
 };
 
 URHO3D_DEFINE_APPLICATION_MAIN(MyApp)

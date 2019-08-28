@@ -6,11 +6,44 @@
 #include <Urho3D/Graphics/Graphics.h>
 #include <Urho3D/Graphics/Octree.h>
 #include <Urho3D/Graphics/Technique.h>
+#include <Urho3D/Graphics/Skybox.h>
 #include <Urho3D/Graphics/Texture2D.h>
 #include <Urho3D/Resource/ResourceCache.h>
 
+#include <Urho3D/Core/CoreEvents.h>
+#include <Urho3D/Engine/Application.h>
+#include <Urho3D/Engine/Engine.h>
+#include <Urho3D/Input/Input.h>
+#include <Urho3D/Input/InputEvents.h>
+#include <Urho3D/Resource/ResourceCache.h>
+#include <Urho3D/Resource/XMLFile.h>
+#include <Urho3D/IO/Log.h>
+#include <Urho3D/UI/UI.h>
+#include <Urho3D/UI/Text.h>
+#include <Urho3D/UI/Font.h>
+#include <Urho3D/UI/Button.h>
+#include <Urho3D/UI/UIEvents.h>
+#include <Urho3D/Scene/Scene.h>
+#include <Urho3D/Scene/SceneEvents.h>
+#include <Urho3D/Graphics/Graphics.h>
+#include <Urho3D/Graphics/Camera.h>
+#include <Urho3D/Graphics/Geometry.h>
+#include <Urho3D/Graphics/Renderer.h>
+#include <Urho3D/Graphics/DebugRenderer.h>
+#include <Urho3D/Graphics/Octree.h>
+#include <Urho3D/Graphics/Light.h>
+#include <Urho3D/Graphics/Model.h>
+#include <Urho3D/Graphics/StaticModel.h>
+#include <Urho3D/Graphics/Material.h>
+#include <Urho3D/Graphics/Skybox.h>
+#include <Urho3D/Audio/Sound.h>
+#include <Urho3D/Audio/SoundSource3D.h>
+#include <Urho3D/Audio/SoundListener.h>
+#include <Urho3D/Audio/Audio.h>
+
 #include <stdexcept>
 
+using namespace Urho3D;
 namespace BigWorld
 {
 
@@ -42,6 +75,25 @@ viewarea_recalculation_required(false)
 {
 	scene = new Urho3D::Scene(context);
 	scene->CreateComponent<Urho3D::Octree>();
+
+	// Let's add an additional scene component for fun.
+	scene->CreateComponent<DebugRenderer>();
+
+	ResourceCache* cache=GetSubsystem<ResourceCache>();
+
+	Node* skyNode=scene->CreateChild("Sky");
+	skyNode->SetScale(500.0f); // The scale actually does not matter
+	Skybox* skybox=skyNode->CreateComponent<Skybox>();
+	skybox->SetModel(cache->GetResource<Model>("Models/Box.mdl"));
+	skybox->SetMaterial(cache->GetResource<Material>("Materials/Skybox.xml"));
+
+	Node* boxNode_=scene->CreateChild("Box");
+	boxNode_->SetPosition(Vector3(0,2,15));
+	boxNode_->SetScale(Vector3(3,3,3));
+	StaticModel* boxObject=boxNode_->CreateComponent<StaticModel>();
+	boxObject->SetModel(cache->GetResource<Model>("Models/Box.mdl"));
+	boxObject->SetMaterial(cache->GetResource<Material>("Materials/Stone.xml"));
+	boxObject->SetCastShadows(true);
 
 	if (!headless) {
 		SubscribeToEvent(Urho3D::E_BEGINFRAME, URHO3D_HANDLER(ChunkWorld, handleBeginFrame));
