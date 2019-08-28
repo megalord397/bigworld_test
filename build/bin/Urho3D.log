@@ -1,42 +1,41 @@
-[Wed Aug 28 23:37:11 2019] INFO: Opened log file Urho3D.log
-[Wed Aug 28 23:37:11 2019] INFO: Created 1 worker thread
-[Wed Aug 28 23:37:11 2019] INFO: Added resource path /home/t/workspace/tmp/0000urhoextras/build/bin/Data/
-[Wed Aug 28 23:37:11 2019] INFO: Added resource path /home/t/workspace/tmp/0000urhoextras/build/bin/CoreData/
-[Wed Aug 28 23:37:11 2019] INFO: Set screen mode 1000x700 windowed monitor 0
-[Wed Aug 28 23:37:11 2019] INFO: Initialized input
-[Wed Aug 28 23:37:11 2019] INFO: Initialized user interface
-[Wed Aug 28 23:37:11 2019] DEBUG: Loading resource Textures/Ramp.png
-[Wed Aug 28 23:37:11 2019] DEBUG: Loading temporary resource Textures/Ramp.xml
-[Wed Aug 28 23:37:11 2019] DEBUG: Loading resource Textures/Spot.png
-[Wed Aug 28 23:37:11 2019] DEBUG: Loading temporary resource Textures/Spot.xml
-[Wed Aug 28 23:37:11 2019] DEBUG: Loading resource Techniques/NoTexture.xml
-[Wed Aug 28 23:37:11 2019] DEBUG: Loading resource RenderPaths/Forward.xml
-[Wed Aug 28 23:37:11 2019] INFO: Initialized renderer
-[Wed Aug 28 23:37:11 2019] INFO: Set audio mode 44100 Hz stereo interpolated
-[Wed Aug 28 23:37:11 2019] INFO: Initialized engine
-[Wed Aug 28 23:37:11 2019] DEBUG: Loading resource Models/Box.mdl
-[Wed Aug 28 23:37:11 2019] DEBUG: Loading resource Materials/Skybox.xml
-[Wed Aug 28 23:37:11 2019] DEBUG: Loading resource Techniques/DiffSkybox.xml
-[Wed Aug 28 23:37:11 2019] DEBUG: Loading resource Textures/Skybox.xml
-[Wed Aug 28 23:37:11 2019] DEBUG: Loading temporary resource Textures/BrightDay1_PosX.dds
-[Wed Aug 28 23:37:11 2019] DEBUG: Loading temporary resource Textures/BrightDay1_NegX.dds
-[Wed Aug 28 23:37:11 2019] DEBUG: Loading temporary resource Textures/BrightDay1_PosY.dds
-[Wed Aug 28 23:37:11 2019] DEBUG: Loading temporary resource Textures/BrightDay1_NegY.dds
-[Wed Aug 28 23:37:11 2019] DEBUG: Loading temporary resource Textures/BrightDay1_PosZ.dds
-[Wed Aug 28 23:37:11 2019] DEBUG: Loading temporary resource Textures/BrightDay1_NegZ.dds
-[Wed Aug 28 23:37:11 2019] DEBUG: Loading resource Materials/Stone.xml
-[Wed Aug 28 23:37:11 2019] DEBUG: Loading resource Techniques/DiffNormal.xml
-[Wed Aug 28 23:37:11 2019] DEBUG: Loading resource Techniques/Diff.xml
-[Wed Aug 28 23:37:11 2019] DEBUG: Loading resource Textures/StoneDiffuse.dds
-[Wed Aug 28 23:37:11 2019] DEBUG: Loading resource Textures/StoneNormal.dds
-[Wed Aug 28 23:37:12 2019] DEBUG: Window was moved to 461,215
-[Wed Aug 28 23:37:12 2019] DEBUG: Reloading shaders
-[Wed Aug 28 23:37:12 2019] DEBUG: Loading resource Shaders/GLSL/LitSolid.glsl
-[Wed Aug 28 23:37:12 2019] DEBUG: Loading resource Shaders/GLSL/Skybox.glsl
-[Wed Aug 28 23:37:12 2019] DEBUG: Compiled vertex shader LitSolid()
-[Wed Aug 28 23:37:12 2019] DEBUG: Compiled pixel shader LitSolid(DIFFMAP PACKEDNORMAL)
-[Wed Aug 28 23:37:12 2019] DEBUG: Linked vertex shader LitSolid() and pixel shader LitSolid(DIFFMAP PACKEDNORMAL)
-[Wed Aug 28 23:37:12 2019] DEBUG: Compiled vertex shader Skybox()
-[Wed Aug 28 23:37:12 2019] DEBUG: Compiled pixel shader Skybox()
-[Wed Aug 28 23:37:12 2019] DEBUG: Linked vertex shader Skybox() and pixel shader Skybox()
-[Wed Aug 28 23:37:14 2019] DEBUG: Quitting SDL
+[Thu Aug 29 00:05:47 2019] INFO: Opened log file Urho3D.log
+[Thu Aug 29 00:05:47 2019] INFO: Created 1 worker thread
+[Thu Aug 29 00:05:47 2019] INFO: Added resource path /home/t/workspace/tmp/0000urhoextras/build/bin/Data/
+[Thu Aug 29 00:05:47 2019] INFO: Added resource path /home/t/workspace/tmp/0000urhoextras/build/bin/CoreData/
+[Thu Aug 29 00:05:47 2019] INFO: Set screen mode 1000x700 windowed monitor 0
+[Thu Aug 29 00:05:47 2019] INFO: Initialized input
+[Thu Aug 29 00:05:47 2019] INFO: Initialized user interface
+[Thu Aug 29 00:05:47 2019] DEBUG: Loading resource Textures/Ramp.png
+[Thu Aug 29 00:05:47 2019] DEBUG: Loading temporary resource Textures/Ramp.xml
+[Thu Aug 29 00:05:47 2019] DEBUG: Loading resource Textures/Spot.png
+[Thu Aug 29 00:05:47 2019] DEBUG: Loading temporary resource Textures/Spot.xml
+[Thu Aug 29 00:05:47 2019] DEBUG: Loading resource Techniques/NoTexture.xml
+[Thu Aug 29 00:05:47 2019] DEBUG: Loading resource RenderPaths/Forward.xml
+[Thu Aug 29 00:05:47 2019] INFO: Initialized renderer
+[Thu Aug 29 00:05:47 2019] INFO: Set audio mode 44100 Hz stereo interpolated
+[Thu Aug 29 00:05:47 2019] INFO: Initialized engine
+[Thu Aug 29 00:05:47 2019] DEBUG: Loading resource Models/Box.mdl
+[Thu Aug 29 00:05:47 2019] DEBUG: Loading resource Materials/Skybox.xml
+[Thu Aug 29 00:05:47 2019] DEBUG: Loading resource Techniques/DiffSkybox.xml
+[Thu Aug 29 00:05:47 2019] DEBUG: Loading resource Textures/Skybox.xml
+[Thu Aug 29 00:05:47 2019] DEBUG: Loading temporary resource Textures/BrightDay1_PosX.dds
+[Thu Aug 29 00:05:47 2019] DEBUG: Loading temporary resource Textures/BrightDay1_NegX.dds
+[Thu Aug 29 00:05:47 2019] DEBUG: Loading temporary resource Textures/BrightDay1_PosY.dds
+[Thu Aug 29 00:05:47 2019] DEBUG: Loading temporary resource Textures/BrightDay1_NegY.dds
+[Thu Aug 29 00:05:48 2019] DEBUG: Loading temporary resource Textures/BrightDay1_PosZ.dds
+[Thu Aug 29 00:05:48 2019] DEBUG: Loading temporary resource Textures/BrightDay1_NegZ.dds
+[Thu Aug 29 00:05:48 2019] DEBUG: Loading resource Materials/Stone.xml
+[Thu Aug 29 00:05:48 2019] DEBUG: Loading resource Techniques/DiffNormal.xml
+[Thu Aug 29 00:05:48 2019] DEBUG: Loading resource Techniques/Diff.xml
+[Thu Aug 29 00:05:48 2019] DEBUG: Loading resource Textures/StoneDiffuse.dds
+[Thu Aug 29 00:05:48 2019] DEBUG: Loading resource Textures/StoneNormal.dds
+[Thu Aug 29 00:05:48 2019] DEBUG: Window was moved to 461,215
+[Thu Aug 29 00:05:48 2019] DEBUG: Reloading shaders
+[Thu Aug 29 00:05:48 2019] DEBUG: Loading resource Shaders/GLSL/Skybox.glsl
+[Thu Aug 29 00:05:48 2019] DEBUG: Loading resource Shaders/GLSL/LitSolid.glsl
+[Thu Aug 29 00:05:48 2019] DEBUG: Compiled vertex shader LitSolid()
+[Thu Aug 29 00:05:48 2019] DEBUG: Compiled pixel shader LitSolid(DIFFMAP PACKEDNORMAL)
+[Thu Aug 29 00:05:48 2019] DEBUG: Linked vertex shader LitSolid() and pixel shader LitSolid(DIFFMAP PACKEDNORMAL)
+[Thu Aug 29 00:05:48 2019] DEBUG: Compiled vertex shader Skybox()
+[Thu Aug 29 00:05:48 2019] DEBUG: Compiled pixel shader Skybox()
+[Thu Aug 29 00:05:48 2019] DEBUG: Linked vertex shader Skybox() and pixel shader Skybox()

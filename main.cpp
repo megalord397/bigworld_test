@@ -68,20 +68,25 @@ public:
         String model("Models/Plane.mdl");
         String material("Materials/Terrain.xml");
         chunkWorld->addUndergrowthModel(0, model, material, 0);
-        Corners corners;
-        for (int x = -1; x <= 1; x++)
-            for (int y = -1; y <= 1; y++)
+        for (int cx = -1; cx <= 1; cx++)
+            for (int cy = -1; cy <= 1; cy++)
             {
-                IntVector2 pos(x, y);
-                BigWorld::Corner corner;
-                corner.height = 0;
-                corner.ttypes.initRawFill(1);
-                corner.ttypes.rawFillByte(0, 0);
-                corners.Push(corner);
+                Corners corners;
+                for (int x = -1; x <= 1; x++)
+                    for (int y = -1; y <= 1; y++)
+                    {
+                        IntVector2 pos(x, y);
+                        BigWorld::Corner corner;
+                        corner.height = 0;
+                        corner.ttypes.initRawFill(1);
+                        corner.ttypes.rawFillByte(0, 0);
+                        corners.Push(corner);
+                    }
+                IntVector2 pos(cx, cy);
+                Chunk *chunk = new Chunk(chunkWorld, pos, corners);
+                chunkWorld->addChunk(pos, chunk);
             }
         IntVector2 pos(0, 0);
-        Chunk *chunk = new Chunk(chunkWorld, pos, corners);
-        chunkWorld->addChunk(pos, chunk);
         BigWorld::Camera *camera = chunkWorld->setUpCamera(pos, 0, Vector3(0, 3, 0), 0, 20, 0, 0);
 
         cameracontrol_ = new CameraControl(context_);
