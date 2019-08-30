@@ -63,8 +63,12 @@ public:
 
     virtual void Start()
     {
-        ChunkWorld *chunkWorld = new ChunkWorld(context_, 3, 3, 1, 1, 30, 30, false);
-        chunkWorld->addTerrainTexture("Textures/TerrainWeights.dds");
+        const int CHUNK_WIDTH = 32;
+        ChunkWorld *chunkWorld = new ChunkWorld(context_, CHUNK_WIDTH, 1, 1, 1, 30, 30, false);
+        chunkWorld->addTerrainTexture("Textures/terrain0.jpg");
+        chunkWorld->addTerrainTexture("Textures/terrain1.jpg");
+        chunkWorld->addTerrainTexture("Textures/terrain2.jpg");
+        chunkWorld->addTerrainTexture("Textures/terrain3.jpg");
         String model("Models/Plane.mdl");
         String material("Materials/Terrain.xml");
         chunkWorld->addUndergrowthModel(0, model, material, 0);
@@ -72,14 +76,13 @@ public:
             for (int cy = -1; cy <= 1; cy++)
             {
                 Corners corners;
-                for (int x = -1; x <= 1; x++)
-                    for (int y = -1; y <= 1; y++)
+                for (int x = 0; x < CHUNK_WIDTH; x++)
+                    for (int y = 0; y < CHUNK_WIDTH; y++)
                     {
-                        IntVector2 pos(x, y);
                         BigWorld::Corner corner;
-                        corner.height = 0;
+                        corner.height = (x * y) % 5;
                         corner.ttypes.initRawFill(1);
-                        corner.ttypes.rawFillByte(0, 0);
+                        corner.ttypes.rawFillByte(0, 1);
                         corners.Push(corner);
                     }
                 IntVector2 pos(cx, cy);
@@ -87,7 +90,7 @@ public:
                 chunkWorld->addChunk(pos, chunk);
             }
         IntVector2 pos(0, 0);
-        BigWorld::Camera *camera = chunkWorld->setUpCamera(pos, 0, Vector3(0, 3, 0), 0, 20, 0, 0);
+        BigWorld::Camera *camera = chunkWorld->setUpCamera(pos, 0, Vector3(0, 30, 0), 0, 60, 0, 0);
 
         cameracontrol_ = new CameraControl(context_);
 

@@ -11,7 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1dd5f5c5-4ecb-4f30-b4fd-cf5fd5eb5c5a" name="Default Changelist" comment="">
+    <list default="true" id="1dd5f5c5-4ecb-4f30-b4fd-cf5fd5eb5c5a" name="Default Changelist" comment="add neighboring chunks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/bin/Tests" beforeDir="false" afterPath="$PROJECT_DIR$/build/bin/Tests" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/bin/Urho3D.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/bin/Urho3D.log" afterDir="false" />
@@ -47,8 +47,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="70" column="40" lean-forward="true" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
+            <state relative-caret-position="212">
+              <caret line="73" column="35" selection-start-line="73" selection-start-column="35" selection-end-line="73" selection-end-column="35" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -57,34 +57,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chunkworld.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="565" lean-forward="true" selection-start-line="565" selection-end-line="565" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/camera.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chunk.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="179">
+              <caret line="29" column="46" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="46" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -117,6 +93,12 @@
       <find>va_being_built_view_distance_in_chunks</find>
       <find>viewdistance_in_chunks</find>
       <find>с</find>
+      <find>buildLod</find>
+      <find>calculateTerraintypeImage</find>
+      <find>ttypes</find>
+      <find>chunk_width</find>
+      <find>CHUNK_W</find>
+      <find>used_ttypes</find>
     </findStrings>
     <replaceStrings>
       <replace>c</replace>
@@ -131,8 +113,8 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/chunk.cpp" />
         <option value="$PROJECT_DIR$/types.hpp" />
-        <option value="$PROJECT_DIR$/chunkworld.cpp" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/chunkworld.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
@@ -148,12 +130,31 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Tests" type="b2602c69:ProjectViewProjectNode" />
               <item name="0000urhoextras" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="0000urhoextras" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="0000urhoextras" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="0000urhoextras" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
+              <item name="Textures" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Tests" type="b2602c69:ProjectViewProjectNode" />
@@ -169,7 +170,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -211,7 +211,8 @@
       <updated>1566838754643</updated>
       <workItem from="1566838757347" duration="3231000" />
       <workItem from="1567016544401" duration="1797000" />
-      <workItem from="1567022584900" duration="3741000" />
+      <workItem from="1567022584900" duration="4211000" />
+      <workItem from="1567189452395" duration="3161000" />
     </task>
     <task id="LOCAL-00001" summary="fix viewport">
       <created>1567023544713</created>
@@ -248,21 +249,28 @@
       <option name="project" value="LOCAL" />
       <updated>1567026065403</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add neighboring chunks">
+      <created>1567026380634</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1567026380634</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8769000" />
+    <option name="totallyTimeSpent" value="12400000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.5005513" side_tool="true" weight="0.2497332" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49944875" visible="true" weight="0.1905016" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49944875" visible="true" weight="0.19263607" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3296582" />
       <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.27232635" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -272,7 +280,7 @@
       <window_info anchor="bottom" id="Messages" order="9" weight="0.18522602" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32929516" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.22601984" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.22577092" />
       <window_info anchor="right" id="Database" order="0" weight="0.32977587" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -293,17 +301,6 @@
     <MESSAGE value="add terrain model" />
     <MESSAGE value="add neighboring chunks" />
     <option name="LAST_COMMIT_MESSAGE" value="add neighboring chunks" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/chunk.cpp</url>
-          <line>167</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
@@ -419,16 +416,6 @@
     <entry file="file://$PROJECT_DIR$/procedural/md5rng.hpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/camera.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/camera.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
@@ -443,30 +430,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chunk.cpp">
+    <entry file="file://$PROJECT_DIR$/camera.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="195">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding>
-            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Urho3DSP/Build/include/Urho3D/Container/Ptr.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lodbuilder.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="398" column="21" selection-start-line="398" selection-start-column="13" selection-end-line="398" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chunkworld.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="565" lean-forward="true" selection-start-line="565" selection-end-line="565" />
+        <state relative-caret-position="203">
+          <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/chunk.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="29" column="46" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="70" column="40" lean-forward="true" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
+        <state relative-caret-position="212">
+          <caret line="73" column="35" selection-start-line="73" selection-start-column="35" selection-end-line="73" selection-end-column="35" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
