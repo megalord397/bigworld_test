@@ -13,9 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1dd5f5c5-4ecb-4f30-b4fd-cf5fd5eb5c5a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/bin/Tests" beforeDir="false" afterPath="$PROJECT_DIR$/build/bin/Tests" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/bin/Urho3D.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/bin/Urho3D.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,8 +44,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="97" column="36" selection-start-line="97" selection-start-column="36" selection-end-line="97" selection-end-column="36" />
+            <state relative-caret-position="542">
+              <caret line="105" column="5" lean-forward="true" selection-start-line="105" selection-start-column="5" selection-end-line="105" selection-end-column="5" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -68,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chunkworld.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="419" column="26" selection-start-line="419" selection-start-column="26" selection-end-line="419" selection-end-column="26" />
+            <state relative-caret-position="104">
+              <caret line="52" column="20" lean-forward="true" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -154,6 +151,7 @@
       <find>used_ttypes</find>
       <find>texs_names</find>
       <find>getSingleLayerTerrainMaterial</find>
+      <find>chunks</find>
     </findStrings>
     <replaceStrings>
       <replace>c</replace>
@@ -267,7 +265,7 @@
       <workItem from="1566838757347" duration="3231000" />
       <workItem from="1567016544401" duration="1797000" />
       <workItem from="1567022584900" duration="4211000" />
-      <workItem from="1567189452395" duration="4504000" />
+      <workItem from="1567189452395" duration="6289000" />
     </task>
     <task id="LOCAL-00001" summary="fix viewport">
       <created>1567023544713</created>
@@ -325,11 +323,25 @@
       <option name="project" value="LOCAL" />
       <updated>1567193217505</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="set default pitch">
+      <created>1567194091617</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1567194091617</updated>
+    </task>
+    <task id="LOCAL-00010" summary="show many chunks">
+      <created>1567195534548</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1567195534548</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13743000" />
+    <option name="totallyTimeSpent" value="15528000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
@@ -339,8 +351,8 @@
       <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49944875" visible="true" weight="0.19263607" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3296582" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.27232635" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3296582" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.27232635" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -371,7 +383,9 @@
     <MESSAGE value="add neighboring chunks" />
     <MESSAGE value="show one chunk" />
     <MESSAGE value="add camera control" />
-    <option name="LAST_COMMIT_MESSAGE" value="add camera control" />
+    <MESSAGE value="set default pitch" />
+    <MESSAGE value="show many chunks" />
+    <option name="LAST_COMMIT_MESSAGE" value="show many chunks" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
@@ -537,8 +551,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chunkworld.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="419" column="26" selection-start-line="419" selection-start-column="26" selection-end-line="419" selection-end-column="26" />
+        <state relative-caret-position="104">
+          <caret line="52" column="20" lean-forward="true" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
@@ -547,8 +561,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="97" column="36" selection-start-line="97" selection-start-column="36" selection-end-line="97" selection-end-column="36" />
+        <state relative-caret-position="542">
+          <caret line="105" column="5" lean-forward="true" selection-start-line="105" selection-start-column="5" selection-end-line="105" selection-end-column="5" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
