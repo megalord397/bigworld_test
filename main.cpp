@@ -45,6 +45,7 @@ class MyApp: public Application
 {
 public:
     CameraControl *cameracontrol_;
+    BigWorld::Camera *bwCamera_;
     MyApp(Context *context)
         : Application(context)
     {
@@ -57,8 +58,8 @@ public:
         engineParameters_["WindowHeight"] = 700;
         engineParameters_["WindowResizable"] = false;
 
-        GetContext()->GetSubsystem<Input>()->SetMouseGrabbed(false);
-        GetContext()->GetSubsystem<Input>()->SetMouseVisible(true);
+//        GetContext()->GetSubsystem<Input>()->SetMouseGrabbed(false);
+//        GetContext()->GetSubsystem<Input>()->SetMouseVisible(true);
     }
 
     virtual void Start()
@@ -90,12 +91,12 @@ public:
                 chunkWorld->addChunk(pos, chunk);
             }
         IntVector2 pos(0, 0);
-        BigWorld::Camera *camera = chunkWorld->setUpCamera(pos, 0, Vector3(0, 30, 0), 0, 60, 0, 0);
+        bwCamera_ = chunkWorld->setUpCamera(pos, 0, Vector3(0, 30, 0), 0, 60, 0, 0);
 
         cameracontrol_ = new CameraControl(context_);
 
         Renderer *renderer = GetSubsystem<Renderer>();
-        SharedPtr<Viewport> viewport(new Viewport(context_, chunkWorld->getScene(), camera->getRawCamera()));
+        SharedPtr<Viewport> viewport(new Viewport(context_, chunkWorld->getScene(), bwCamera_->getRawCamera()));
         renderer->SetViewport(0, viewport);
 
         SubscribeToEvent(E_UPDATE, URHO3D_HANDLER(MyApp, HandleUpdate));
@@ -104,6 +105,12 @@ public:
     void HandleUpdate(StringHash eventType, VariantMap &eventData)
     {
         cameracontrol_->update();
+        Quaternion rotation;
+        cameracontrol_->getRotation(rotation);
+        bwCamera_->setRotation(rotation.YawAngle(), rotation.PitchAngle(), rotation.RollAngle());
+        Vector3 pos;
+        cameracontrol_->getFlyingMovement(pos);
+        bwCamera_->applyAbsoluteMovement(pos);
     }
 };
 
