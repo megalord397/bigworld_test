@@ -81,7 +81,7 @@ public:
                     for (int y = 0; y < CHUNK_WIDTH; y++)
                     {
                         BigWorld::Corner corner;
-                        corner.height = (x * y) % 5;
+                        corner.height = (x * y) % 10;
                         corner.ttypes.initRawFill(1);
                         corner.ttypes.rawFillByte(0, 1);
                         corners.Push(corner);
@@ -94,6 +94,8 @@ public:
         bwCamera_ = chunkWorld->setUpCamera(pos, 0, Vector3(0, 30, 0), 0, 60, 0, 0);
 
         cameracontrol_ = new CameraControl(context_);
+        cameracontrol_->setYaw(0);
+        cameracontrol_->setPitch(60);
 
         Renderer *renderer = GetSubsystem<Renderer>();
         SharedPtr<Viewport> viewport(new Viewport(context_, chunkWorld->getScene(), bwCamera_->getRawCamera()));
